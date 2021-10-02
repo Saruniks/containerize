@@ -2,3 +2,6 @@
 users-microservice/target
 terraform/.terraform.lock.hcl
 terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/2.70.0/linux_amd64/terraform-provider-aws_v2.70.0_x4
+terraform/terraform.tfstate
+terraform/.terraform.tfstate.lock.info
+terraform/terraform.tfstate.backup

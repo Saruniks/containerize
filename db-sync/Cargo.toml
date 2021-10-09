@@ -1,0 +1,19 @@
+[package]
+name = "db-sync"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "2.33.3"
+config = "0.11.0"
+diesel = { version = "1.4.8", features = ["postgres", "r2d2"] }
+diesel_migrations = "1.4"
+env_logger = "0.9"
+failure = "0.1.8"
+log = "0.4.14"
+postgres = "0.19.2"
+r2d2 = "0.8.9"
+serde = "1.0.130"
+serde_derive = "1.0.130"

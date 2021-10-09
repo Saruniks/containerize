@@ -3,14 +3,12 @@
 # todo: own every line of the code in this file
 
 #!/bin/bash
+
 set -e
 
 # Disable interactive apt prompts
 export DEBIAN_FRONTEND=noninteractive
 echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
-
-sudo mkdir /ops
-sudo chmod 777 /ops
 
 cd /ops
 
@@ -40,6 +38,7 @@ CONSULTEMPLATEDIR=/opt/consul-template
 sudo apt-get install -y software-properties-common
 sudo apt-get update
 sudo apt-get install -y dnsmasq unzip tree redis-tools jq curl tmux bash-completion
+
 
 # Disable the firewall
 

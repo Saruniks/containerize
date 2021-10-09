@@ -21,7 +21,7 @@ region = "us-east-2"
 # `ami` (required) - The base AMI for the created nodes, This AMI must exist in
 # the requested region for this environment to build properly.
 #  - If it is not provided here, it will be requested interactively.
-ami = "ami-041feb3a8faa3f258"
+ami = "ami-079131c13de8d117e"
 
 # `server_instance_type` ("t2.medi  um"), `client_instance_type` ("t2.medium"),
 # `server_count` (3),`client_count` (4) - These options control instance size

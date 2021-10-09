@@ -1,14 +1,22 @@
 {
-    "builders": [
-        {
-            "type": "amazon-ebs",
-            "region": "us-east-2",
-            "ami_name": "vendenic {{timestamp}}",
-            "instance_type": "t2.micro",
-            "source_ami": "ami-00399ec92321828f5",
-            "ssh_username": "ubuntu"
-        }
-    ],
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "us-east-2",
+    "source_ami_filter": {
+      "filters": {
+        "virtualization-type": "hvm",
+        "architecture": "x86_64",
+        "name": "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
+        "block-device-mapping.volume-type": "gp2",
+        "root-device-type": "ebs"
+      },
+      "owners": ["099720109477"],
+      "most_recent": true
+    },
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "vendenic {{timestamp}}"
+  }],
     "provisioners":  [
         {
           "type": "shell",
